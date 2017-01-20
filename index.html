@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>How long until america is safe again?</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="jquery.countdown.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+            font-weight: 300;
+            color: white;
+        }
+        
+        [v-cloak] {
+            display: none;
+        }
+
+        #app {
+            background-image: url("/images/usa.jpg");
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <div>
+        <h1>How long until america is safe again?</h1>
+    </div>
+
+    <div>
+        <h3 id="countdown"></h3>
+    </div>
+
+</div>
+<script>
+    $("#countdown")
+        .countdown("2021/01/20", function(event) {
+            $(this).text(
+                event.strftime('%D days %H:%M:%S')
+            );
+        });
+</script>
+</body>
+</html>
